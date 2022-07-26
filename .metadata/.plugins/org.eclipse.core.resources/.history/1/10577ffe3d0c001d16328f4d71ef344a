@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package com.in28minutes.learnspringboot.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * @author esliv
+ *
+ */
+@RestController
+public class BooksController {
+	
+	@GetMapping
+	public List<Courses> getCourses() {
+		
+	}
+
+}

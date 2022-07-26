@@ -1,0 +1,30 @@
+package com.java8.lamda;
+interface PerformOperation {
+ boolean check(int a);
+}
+class MyMath {
+ public static boolean checker(PerformOperation p, int num) {
+  return p.check(num);
+ }
+
+   // Write your code here
+public PerformOperation isOdd() {
+    return (a) -> a%2==0? false: true;   
+}
+public PerformOperation isPrime() {
+    boolean isPrime = true;
+    PerformOperation po = (a) -> {
+        if(a<=3) {
+          return true;  
+        }
+        if(a%2==0) {
+            return false;
+        }
+        for(int i = 1; i <= a/2; i++) {
+          if(a%i==0) {
+              isPrime = false;
+          }  
+        }
+        return isPrime;
+    };
+}
